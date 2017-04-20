@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Weather Forecast</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="icon"  href="img/icon.png">
+	<!--<script src="https://use.fontawesome.com/09a46264ab.js"></script>-->
+</head>
+<body>
+	<section class="section1">
+		<nav class="nav-container">
+			<h1 class="header">Weather Forecast</h1>
+			<div class="nav">
+				<a class="get-location" href="#">Get Location</a>
+				<div class="history">
+					<span class="history-span">History</span>
+					<div class="history-container">
+						<a href="#">No data</a>
+		        	</div>
+				</div>
+		        <form>
+		        	<input class="search-input" type="text" name="" placeholder="Search location">
+		        	<input class="search-btn" type="submit" name="" value="Search">
+		        </form>
+			</div>
+	        
+	    </nav>
+	</section>
+
+	<section class="section2">
+		<div class="current-weather">
+			<div class="weather-overview">
+				<div class="day">Today</div>
+				<span>Wednesday</span>
+				<p></p>
+				<img src="img/2.svg">
+				<p></p>
+				<h3 class="weather">Sunny</h3>
+			</div>
+			<div class="weather-overview">
+				<div class="city">Lagos</div>
+				<br>
+				<span>Temperature: 45&deg;C</span>
+				<hr>
+				<span>Wind: 45 KM/h</span>
+				<hr>
+				<span>Rain: 45%</span>
+				<hr>
+				<span>Humidity: 45%</span>
+			</div>		
+		</div>
+		<div class="fore-weather">
+			<div class="days">
+				<div>Thurs</div>
+				<div class="weather-icons"><img src="img/1.svg"></div>
+				<div>25&deg;C</div>
+				<div>Cloudy</div>
+			</div>
+			<div class="days">
+				<div>Fri</div>
+				<div class="weather-icons"><img src="img/1.svg"></div>
+				<div>25&deg;C</div>
+				<div>Cloudy</div>
+			</div>
+			<div class="days">
+				<div>Sat</div>
+				<div class="weather-icons"><img src="img/1.svg"></div>
+				<div>25&deg;C</div>
+				<div>Cloudy</div>
+			</div>
+			<div class="days">
+				<div>Sun</div>
+				<div class="weather-icons"><img src="img/1.svg"></div>
+				<div>25&deg;C</div>
+				<div>Sunny</div>
+			</div>
+			<div class="days">
+				<div>Mon</div>
+				<div class="weather-icons"><img src="img/1.svg"></div>
+				<div>25&deg;C</div>
+				<div>Sunny</div>
+			</div>
+			<div class="days">
+				<div>Tue</div>
+				<div class="weather-icons"><img src="img/1.svg"></div>
+				<div>25&deg;C</div>
+				<div>Sunny</div>
+			</div>
+		</div>
+	</section>
+
+	<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="logic.js"></script>
+</body>
+</html>

@@ -15,17 +15,16 @@
 		<nav class="nav-container">
 			<h1 class="header">Weather Forecast</h1>
 			<div class="nav">
-				<a class="get-location" href="#">Get Location</a>
 				<div class="history">
 					<span class="history-span">History</span>
 					<div class="history-container">
-						<a href="#">No data</a>
+						<ul></ul>
 		        	</div>
 				</div>
-		        <form>
-		        	<input class="search-input" type="text" name="" placeholder="Search location">
-		        	<input class="search-btn" type="submit" name="" value="Search">
-		        </form>
+		        <div class="search">
+		        	<input id="autocomplete" class="search-input" type="text" name="" placeholder="Search location..." required>
+		        	<input class="search-btn" type="button" name="" value="Search">
+		        </div>
 			</div>
 	        
 	    </nav>
@@ -34,66 +33,75 @@
 	<section class="section2">
 		<div class="current-weather">
 			<div class="weather-overview">
-				<div class="day">Today</div>
-				<span>Wednesday</span>
-				<p></p>
-				<img src="img/2.svg">
-				<p></p>
-				<h3 class="weather">Sunny</h3>
+				<strong class="day"></strong>
+				<br>
+				<span class="day-des"></span>
+				<br>
+				<img class="main-img" src="img/spin.svg">
+				<br>
+				<h3 class="weather"></h3>
 			</div>
 			<div class="weather-overview">
-				<div class="city">Lagos</div>
+				<div class="city"></div>
 				<br>
-				<span>Temperature: 45&deg;C</span>
+				<span>Temperature: <span class="temp-main"></span>&deg;C</span>
 				<hr>
-				<span>Wind: 45 KM/h</span>
+				<span>Wind speed: <span class="wind-main"></span>m/s</span>
 				<hr>
-				<span>Rain: 45%</span>
+				<span>Pressure: <span class="pressure-main"></span> hPa</span>
 				<hr>
-				<span>Humidity: 45%</span>
+				<span>Humidity: <span class="humidity-main"></span>%</span>
 			</div>		
 		</div>
 		<div class="fore-weather">
 			<div class="days">
-				<div>Thurs</div>
-				<div class="weather-icons"><img src="img/1.svg"></div>
-				<div>25&deg;C</div>
-				<div>Cloudy</div>
+				<div id="day0"></div>
+				<div class="weather-icons icon0"><img src="img/spin.svg"></div>
+				<div><span id="temp0"></span></div>
+				<div class="des"><span class="description0"></span></div>
 			</div>
 			<div class="days">
-				<div>Fri</div>
-				<div class="weather-icons"><img src="img/1.svg"></div>
-				<div>25&deg;C</div>
-				<div>Cloudy</div>
+				<div id="day1"></div>
+				<div class="weather-icons icon1"><img src="img/spin.svg"></div>
+				<div><span id="temp1"></span></div>
+				<div class="des"><span class="description1"></span></div>
 			</div>
 			<div class="days">
-				<div>Sat</div>
-				<div class="weather-icons"><img src="img/1.svg"></div>
-				<div>25&deg;C</div>
-				<div>Cloudy</div>
+				<div id="day2"></div>
+				<div class="weather-icons icon2"><img src="img/spin.svg"></div>
+				<div><span id="temp2"></span></div>
+				<div class="des"><span class="description2"></span></div>
 			</div>
 			<div class="days">
-				<div>Sun</div>
-				<div class="weather-icons"><img src="img/1.svg"></div>
-				<div>25&deg;C</div>
-				<div>Sunny</div>
+				<div id="day3"></div>
+				<div class="weather-icons icon3"><img src="img/spin.svg"></div>
+				<div><span id="temp3"></span></div>
+				<div class="des"><span class="description3"></span></div>
 			</div>
 			<div class="days">
-				<div>Mon</div>
-				<div class="weather-icons"><img src="img/1.svg"></div>
-				<div>25&deg;C</div>
-				<div>Sunny</div>
+				<div id="day4"></div>
+				<div class="weather-icons icon4"><img src="img/spin.svg"></div>
+				<div><span id="temp4"></span></div>
+				<div class="des"><span class="description4"></span></div>
 			</div>
 			<div class="days">
-				<div>Tue</div>
-				<div class="weather-icons"><img src="img/1.svg"></div>
-				<div>25&deg;C</div>
-				<div>Sunny</div>
+				<div id="day5"></div>
+				<div class="weather-icons icon5"><img src="img/spin.svg"></div>
+				<div><span id="temp5"></span></div>
+				<div class="des"><span class="description5"></span></div>
+			</div>
+			<div class="days">
+				<div id="day6"></div>
+				<div class="weather-icons icon6"><img src="img/spin.svg"></div>
+				<div><span id="temp6"></span></div>
+				<div class="des"><span class="description6"></span></div>
 			</div>
 		</div>
 	</section>
 
-	<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
-	<script type="text/javascript" src="logic.js"></script>
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7WXnpLwh_A4yM5MT1eJDFkYgpHQNalU4&libraries=places">
+</script>
+<script type="text/javascript" src="js/logic.js"></script>
 </body>
 </html>

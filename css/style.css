@@ -73,7 +73,6 @@ html{
   text-decoration: none;
   text-align: center;
   display: block;
-  font
 }
 .history-container a:hover{
   background-color: rgba(0,0,0,.5);
@@ -81,7 +80,7 @@ html{
 .history:hover .history-container{
     display: block;
 }
-form{
+.search{
   margin: auto 12px auto 12px;
   display: inline-block;
 }
@@ -131,6 +130,11 @@ form{
   display: flex;
   flex-flow: column;
 }
+.fore-weather .des{
+  padding: 5px auto;
+  font-size: 20px;
+  font-weight: bolder;
+}
 .days div{
   text-align: center;
 }
@@ -152,15 +156,7 @@ form{
   font-weight: bolder;
 }
 .weather-overview img{
-  width: 100px;
-}
-
-.weather-details{
-  width: 50%;
-  height: 250px;
-  background: transparent;  
-  margin-top: 40px;
-  line-height: 12px;
+  width: 150px;
 }
 .weather{
   font-size: 30px;

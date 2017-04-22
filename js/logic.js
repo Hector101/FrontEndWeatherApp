@@ -70,42 +70,7 @@ $(()=>{
 				$(".main-img").attr("src", `http://openweathermap.org/img/w/${data.list[0].weather[0].icon}.png`);
 				$(".weather").html(`${data.list[0].weather[0].description}`);
 			});
-	}).fail((err)=>{//if api call fails, use the navigator to get user cooordinates to get weather information.
-		if(navigator.geolocation){
-			navigator.geolocation.getCurrentPosition((position)=>{
-				let lat = position.coords.lat;
-				let lon = position.coords.lon;
-				console.log("Failed")
-				$.getJSON(`http://api.openweathermap.org/data/2.5/forecast/daily?
-						lat=${lat}&lon=${lon}&units=metric&cnt=7&APPID=${APPID}`, (data)=>{
-						$(".overview").html(`<div class="city"></div>
-						<br>
-						<span>Temperature: <span class="temp-main"></span>&deg;C</span>
-						<hr>
-						<span>Wind speed: <span class="wind-main"></span>m/s</span>
-						<hr>
-						<span>Pressure: <span class="pressure-main"></span> hPa</span>
-						<hr>
-						<span>Humidity: <span class="humidity-main"></span>%</span>`);
-						$(".city").html(data.city.name);
-						$(".temp-main").html(data.list[0].temp.day);
-						$(".wind-main").html(data.list[0].speed);
-						$(".pressure-main").html(data.list[0].pressure);
-						$(".humidity-main").html(data.list[0].humidity);
-						for(let i = 0;i<newWeek.length;i++){
-							$(`.icon${i} img`).attr("src", `http://openweathermap.org/img/w/${data.list[i].weather[0].icon}.png`);
-							$(`#temp${i}`).html(`${data.list[i].temp.day}&deg;C`);
-							$(`#temp${i}`).css("font-weight", "bolder");
-							$(`.description${i}`).html(`${data.list[i].weather[0].description}`);
-						}
-						$(".day").html("Today");
-						$(".day-des").html(`${newWeek[0]}`);
-						$(".main-img").attr("src", `http://openweathermap.org/img/w/${data.list[0].weather[0].icon}.png`);
-						$(".weather").html(`${data.list[0].weather[0].description}`);
-					});
-			})
-		}
-	});
+	})
 	/**
 	 * When the search button is clicked, it gets the user input,
 	 * and then use the value to get weather forcast of the location
@@ -259,7 +224,7 @@ $(()=>{
 		});
 	}
 
-	let map;
+	
 	/**
 	 * @method initMap
 	 * @static 
@@ -267,11 +232,11 @@ $(()=>{
 	 * Method initializes map on the page of the location
 	 * using the HTML5 geolocation coordinates.
 	 */
+	let map;
     function initMap(){
-        if(navigator.geolocation){
-            navigator.geolocation.getCurrentPosition((position)=>{
-                let lat = position.coords.latitude;
-                let lon = position.coords.longitude;
+		$.getJSON("http://ip-api.com/json", (data)=>{
+				let lat = data.lat;
+				let lon = data.lon;
                 let center = new google.maps.LatLng(lat,lon);
 				//load map to the dom with id map
                 map = new google.maps.Map(document.getElementById("map"), {
@@ -287,8 +252,7 @@ $(()=>{
 				//Instantiating the google places services from the map.
                 let service = new google.maps.places.PlacesService(map);
                 service.nearbySearch(request, startPlacesServices);
-            });
-        }
+		})
     }
             
 	/**
@@ -363,6 +327,7 @@ $(()=>{
 	 * and auto complete apii when dom is filly loaded.
 	 */
     google.maps.event.addDomListener(window, "load", function(){
+		console.log("data")
         initMap();
 		initAutocomplete();
     });

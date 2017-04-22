@@ -113,19 +113,18 @@ html{
 }
 .fore-weather{
   width: 90%;
-  height: 170px;
+  height: 190px;
   display: flex;
   flex-flow: row;
   justify-content: space-around;
   margin: 7px auto;
   background: #ccc;
   box-shadow: 0 0 3px 1px #fff;
-  margin-top: 7px;
-  margin-bottom: 70px;
+  padding: 40px auto;
 }
 .fore-weather .days{
   width: 16.7%;
-  height: 150px;
+  height: 190px;
   border: none;
   display: flex;
   flex-flow: column;
@@ -133,7 +132,6 @@ html{
 .fore-weather .des{
   padding: 5px auto;
   font-size: 20px;
-  font-weight: bolder;
 }
 .days div{
   text-align: center;
@@ -153,7 +151,7 @@ html{
 }
 .weather-overview span{
   font-size: 20px;
-  font-weight: bolder;
+  font-weight: bold;
 }
 .weather-overview img{
   width: 150px;
@@ -171,12 +169,36 @@ html{
   font-size: 40px;
   font-weight: bold;
 }
+.nearby{
+  text-align: center;
+  color: rgba(255, 195, 0, 1);
+  margin-top: 50px;
+}
+.nearby span{
+  font-weight: bolder;
+  font-size: 50px;
+}
+#map{
+  width: 90%;
+  height: 400px;
+  margin: 40px auto;
+  box-shadow: 0 0 3px 1px #fff;
+}
 
 
 
 
 
-
-media all and (max-width: 480px) {
-    
+@media all and (max-width: 480px) {
+    .fore-weather{
+      width: 90%;
+      height: 190px;
+      display: flex;
+      flex-flow: column;
+      justify-content: space-around;
+      margin: 7px auto;
+      background: #ccc;
+      box-shadow: 0 0 3px 1px #fff;
+      padding: 40px auto;
+  }
 }

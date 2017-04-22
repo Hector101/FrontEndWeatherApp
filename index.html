@@ -5,22 +5,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Weather Forecast</title>
-	<link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="icon"  href="img/icon.png">
-	<!--<script src="https://use.fontawesome.com/09a46264ab.js"></script>-->
 </head>
 <body>
 	<section class="section1">
 		<nav class="nav-container">
 			<h1 class="header">Weather Forecast</h1>
 			<div class="nav">
-				<div class="history">
-					<span class="history-span">History</span>
-					<div class="history-container">
-						<ul></ul>
-		        	</div>
-				</div>
 		        <div class="search">
 		        	<input id="autocomplete" class="search-input" type="text" name="" placeholder="Search location..." required>
 		        	<input class="search-btn" type="button" name="" value="Search">
@@ -41,56 +34,48 @@
 				<br>
 				<h3 class="weather"></h3>
 			</div>
-			<div class="weather-overview">
-				<div class="city"></div>
-				<br>
-				<span>Temperature: <span class="temp-main"></span>&deg;C</span>
-				<hr>
-				<span>Wind speed: <span class="wind-main"></span>m/s</span>
-				<hr>
-				<span>Pressure: <span class="pressure-main"></span> hPa</span>
-				<hr>
-				<span>Humidity: <span class="humidity-main"></span>%</span>
-			</div>		
+			<div class="weather-overview overview">
+				
+			</div>
 		</div>
 		<div class="fore-weather">
-			<div class="days">
+			<div class="days 0">
 				<div id="day0"></div>
 				<div class="weather-icons icon0"><img src="img/spin.svg"></div>
 				<div><span id="temp0"></span></div>
 				<div class="des"><span class="description0"></span></div>
 			</div>
-			<div class="days">
+			<div class="days 1">
 				<div id="day1"></div>
 				<div class="weather-icons icon1"><img src="img/spin.svg"></div>
 				<div><span id="temp1"></span></div>
 				<div class="des"><span class="description1"></span></div>
 			</div>
-			<div class="days">
+			<div class="days 2">
 				<div id="day2"></div>
 				<div class="weather-icons icon2"><img src="img/spin.svg"></div>
 				<div><span id="temp2"></span></div>
 				<div class="des"><span class="description2"></span></div>
 			</div>
-			<div class="days">
+			<div class="days 3">
 				<div id="day3"></div>
 				<div class="weather-icons icon3"><img src="img/spin.svg"></div>
 				<div><span id="temp3"></span></div>
 				<div class="des"><span class="description3"></span></div>
 			</div>
-			<div class="days">
+			<div class="days 4">
 				<div id="day4"></div>
 				<div class="weather-icons icon4"><img src="img/spin.svg"></div>
 				<div><span id="temp4"></span></div>
 				<div class="des"><span class="description4"></span></div>
 			</div>
-			<div class="days">
+			<div class="days 5">
 				<div id="day5"></div>
 				<div class="weather-icons icon5"><img src="img/spin.svg"></div>
 				<div><span id="temp5"></span></div>
 				<div class="des"><span class="description5"></span></div>
 			</div>
-			<div class="days">
+			<div class="days 6">
 				<div id="day6"></div>
 				<div class="weather-icons icon6"><img src="img/spin.svg"></div>
 				<div><span id="temp6"></span></div>
@@ -98,9 +83,16 @@
 			</div>
 		</div>
 	</section>
+	<section class="nearby">
+		<span>Nearby Locations</span>
+	</section>
+	<section id="map">
+
+	</section>
 
 <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7WXnpLwh_A4yM5MT1eJDFkYgpHQNalU4&libraries=places">
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?
+key=AIzaSyD7WXnpLwh_A4yM5MT1eJDFkYgpHQNalU4&libraries=places">
 </script>
 <script type="text/javascript" src="js/logic.js"></script>
 </body>
